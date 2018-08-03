@@ -45,6 +45,14 @@ cd output_directory
 convert -resize 50% -delay 50 -loop 0 *.jpg selfies.gif
 ```
 
+## Known issues
+
+- The photo rotation is hard-coded
+- "Invalid SOS parameters for sequential JPEG" is printed to console
+- All the photos are loaded into memory (can potentially use a lot of memory)
+- `convert` also takes a lot of memory to create the gif
+-- Run `mogrify -resize 720x1280 *.jpg` to resize the jpgs if needed
+
 ## References
 
 This project was heavily reliant on the following tutorial: https://www.pyimagesearch.com/2017/04/10/detect-eyes-nose-lips-jaw-dlib-opencv-python/
